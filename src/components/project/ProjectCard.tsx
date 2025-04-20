@@ -3,9 +3,11 @@
 import { ProjectType } from "@/constant/icon";
 import { useColorModeValue } from "../ui/color-mode";
 import { FaGithub } from "react-icons/fa";
+import { FaArrowUpRightFromSquare as PreviewIcon } from "react-icons/fa6";
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
-  const { title, project_type, git_link, descriptions, tools } = project;
+  const { title, project_type, git_link, preview_link, descriptions, tools } =
+    project;
   const dark = {
     bg: "bg-gray-800/50",
     title: "text-white",
@@ -32,14 +34,26 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
     >
       <div className="flex items-start justify-between mb-2">
         <p className={`text-xl font-semibold ${colorClass.title}`}>{title}</p>
-        <a
-          href={git_link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${colorClass.title} hover:text-blue-300 transition-all duration-500`}
-        >
-          <FaGithub size={24} />
-        </a>
+        <div className="flex gap-3">
+          <a
+            href={git_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${colorClass.title} hover:text-blue-300 transition-all duration-500`}
+          >
+            <FaGithub size={24} />
+          </a>
+          {preview_link && (
+            <a
+              href={preview_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${colorClass.title} hover:text-blue-300 transition-all duration-500`}
+            >
+              <PreviewIcon size={24} />
+            </a>
+          )}
+        </div>
       </div>
 
       <p className={`text-sm mb-2 ${colorClass.project_type}`}>
@@ -64,7 +78,6 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
                 <Icon size={22} color={iconColor} />
               </div>
               <span className="sm:text-[10px] md:text-[12px] ">{label}</span>
-
             </div>
           );
         })}

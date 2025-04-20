@@ -4,7 +4,7 @@ import { Provider } from "@/components/ui/provider";
 import "./globals.css";
 import ClientLayout from "@/components/layout/ClientLayout";
 import { ThemeWrapper } from "@/components/ui/color-mode";
-
+import { RenderMounted } from "@/components/render";
 // ใช้ React.lazy เพื่อโหลด component แบบ Lazy
 
 // โหลดฟอนต์
@@ -42,11 +42,13 @@ export default function RootLayout({
       className={`${kanit.variable} ${poppins.variable}`}
     >
       <body suppressHydrationWarning>
-        <Provider>
-          <ThemeWrapper>
-            <ClientLayout>{children}</ClientLayout>
-          </ThemeWrapper>
-        </Provider>
+        <RenderMounted>
+          <Provider>
+            <ThemeWrapper>
+              <ClientLayout>{children}</ClientLayout>
+            </ThemeWrapper>
+          </Provider>
+        </RenderMounted>
       </body>
     </html>
   );

@@ -57,11 +57,12 @@ export const SkillIcons = {
 };
 
 export type ProjectType = {
-  title: string;
-  project_type: string;
-  git_link: string;
-  descriptions: string;
-  tools: {
+  title?: string;
+  project_type?: string;
+  git_link?: string;
+  preview_link?: string;
+  descriptions?: string;
+  tools?: {
     label: string;
     icon: IconType; // SkillIcons
     color: { dark: string; light: string };
@@ -135,6 +136,26 @@ export const skills = [
 ];
 
 export const projects: ProjectType[] = [
+  {
+    title: "Portfolio Website",
+    project_type: "Personal Project",
+    git_link: "https://github.com/mskerz/next-app-portfolio",
+    preview_link: "https://wichasin-next-portfolio.vercel.app/",
+    descriptions:
+      "A personal portfolio website built with Next.js and Tailwind CSS. Implemented Chakra UI and Framer Motion for animations.",
+    tools: [
+      {
+        label: "Next.js",
+        icon: SkillIcons.NextJS,
+        color: { dark: "#FFFF", light: "#000000" },
+      },
+      {
+        label: "Tailwind CSS",
+        icon: SkillIcons.Tailwind,
+        color: { dark: "#38bdf8", light: "#38bdf8" },
+      },
+    ],
+  },
   {
     title: "Mini Blog Social Media",
     project_type: "Side Project",
