@@ -5,6 +5,8 @@ import "./globals.css";
 import ClientLayout from "@/components/layout/ClientLayout";
 import { ThemeWrapper } from "@/components/ui/color-mode";
 import { RenderMounted } from "@/components/render";
+import { Toaster  } from "@/components/ui/toaster"
+
 // ใช้ React.lazy เพื่อโหลด component แบบ Lazy
 
 // โหลดฟอนต์
@@ -46,6 +48,7 @@ export default function RootLayout({
           <Provider>
             <ThemeWrapper>
               <ClientLayout>{children}</ClientLayout>
+              <Toaster />
             </ThemeWrapper>
           </Provider>
         </RenderMounted>
