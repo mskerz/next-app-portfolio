@@ -159,7 +159,8 @@ export const projects: ProjectType[] = [
   {
     title: "Mini Blog Social Media",
     project_type: "Side Project",
-    git_link: "",
+    git_link: "https://github.com/mskerz/blog-social-react",
+    preview_link : "https://blog-social-react.vercel.app",
     descriptions:
       "A full-stack Web Application where users can sign up, post, like, comment, and update profiles. Managed state with Redux Toolkit.",
     tools: [
