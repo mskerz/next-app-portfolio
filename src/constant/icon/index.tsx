@@ -158,9 +158,9 @@ export const projects: ProjectType[] = [
   },
   {
     title: "Mini Blog Social Media",
-    project_type: "Side Project",
+    project_type: "Personal Project",
     git_link: "https://github.com/mskerz/blog-social-react",
-    preview_link : "https://blog-social-react.vercel.app",
+    preview_link: "https://blog-social-react.vercel.app",
     descriptions:
       "A full-stack Web Application where users can sign up, post, like, comment, and update profiles. Managed state with Redux Toolkit.",
     tools: [
@@ -228,6 +228,26 @@ export const projects: ProjectType[] = [
     ],
   },
   {
+    title: "Todo Basic App",
+    project_type: "Personal Project",
+    git_link: "https://github.com/mskerz/react-todoListBootstrap",
+    descriptions:
+      "A simple Todo App . Learned the basics of State Management with Hooks and Props.",
+
+    tools: [
+      {
+        label: "React",
+        icon: SkillIcons.React,
+        color: { dark: "#61dafb", light: "#61dafb" },
+      },
+      {
+        label: "Bootstrap",
+        icon: SkillIcons.Bootstrap,
+        color: { dark: "#7952b3", light: "#6f42c1" },
+      },
+    ],
+  },
+  {
     title: "Mobile App : Article App",
     project_type: "Class Project",
     git_link: "https://github.com/mskerz/content_manage_apps",
@@ -258,22 +278,31 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    title: "Todo Basic App",
-    project_type: "Side Project",
-    git_link: "https://github.com/mskerz/react-todoListBootstrap",
+    title: "Web Application : Lottery Sell",
+    project_type: "Class Project",
+    git_link: "https://github.com/mskerz/lotttery_project",
     descriptions:
-      "A simple Todo App . Learned the basics of State Management with Hooks and Props.",
-
+      "Developed a web application for buy-sell lottery tickets featuring user registration, login, ticket search with filter and other features. ",
     tools: [
       {
-        label: "React",
-        icon: SkillIcons.React,
-        color: { dark: "#61dafb", light: "#61dafb" },
+        label: "Angular",
+        icon: SkillIcons.Angular,
+        color: { dark: "#dd0031", light: "#dd0031" },
       },
       {
-        label: "Bootstrap",
-        icon: SkillIcons.Bootstrap,
-        color: { dark: "#7952b3", light: "#6f42c1" },
+        label: "TypeScript",
+        icon: SkillIcons.TypeScript,
+        color: { dark: "#0175c2", light: "#40c4ff" },
+      },
+      {
+        label: "Slim PHP",
+        icon: SkillIcons.PHP,
+        color: { dark: "#8e6bbf", light: "#6e4f7d" }, // โทนม่วง/ฟ้าอ่อน ดูเข้ากับธีมสาย dev
+      },
+      {
+        label: "MySQL",
+        icon: SkillIcons.MySQL,
+        color: { dark: "#00758f", light: "#00758f" },
       },
     ],
   },

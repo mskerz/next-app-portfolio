@@ -7,8 +7,10 @@ export default function ProjectLayout({
     children: React.ReactNode;
   }) {
     return (
-      <PageLayout>
-        {children}
+      <PageLayout >
+       <div className="mb-10">
+       {children}
+       </div>
       </PageLayout>
     );
   }

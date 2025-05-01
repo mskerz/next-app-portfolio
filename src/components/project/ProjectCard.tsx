@@ -60,7 +60,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         {project_type}
       </p>
       <ul className={`list-disc list-inside my-2 ${colorClass.description}`}>
-        <li className="text-lg">{descriptions}</li>
+        <li className="text-md">{descriptions}</li>
       </ul>
 
       <div className="mb-2 grid grid-cols-2 gap-4 min-w-0">
