@@ -4,7 +4,10 @@ import { ReactTyped } from "react-typed";
 import { words } from "@/constant/info";
 import { PageLayout } from "@/components/layout";
 import { useColorModeValue } from "@/components/ui/color-mode";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Button, Image } from "@chakra-ui/react";
+import Link from "next/link";
+import { CiFileOn } from "react-icons/ci";
+
 const imageUrl = "/image/hi_emoji.gif";
 export default function page() {
   const dark = {
@@ -20,12 +23,12 @@ export default function page() {
   };
 
   const colorMode = useColorModeValue(light, dark);
-  const  ShadeColor = useColorModeValue("text-indigo-600", "text-sky-400");
+  const ShadeColor = useColorModeValue("text-indigo-600", "text-sky-400");
   return (
     <PageLayout>
       <div className="flex flex-col items-start justify-center   p-24 ">
         <div className={`font-bold flex ${colorMode.h1Color}`}>
-          <Box display={"flex"}   flexDirection={"column"} gap={3}>
+          <Box display={"flex"} flexDirection={"column"} gap={3}>
             <Box display={"flex"} alignItems={"center"}>
               <p className="text-3xl">Hi&nbsp;,</p>
               <Image width={30} src={imageUrl} alt="hi" />
@@ -33,8 +36,8 @@ export default function page() {
             </Box>
 
             <Box display={"flex"}>
-            <p className={`text-2xl lg:text-4xl ${ShadeColor}`}>
-            Wichasin Sutthiarj
+              <p className={`text-2xl lg:text-4xl ${ShadeColor}`}>
+                Wichasin Sutthiarj
               </p>
             </Box>
           </Box>
@@ -45,6 +48,25 @@ export default function page() {
             <ReactTyped strings={words} typeSpeed={100} backSpeed={50} loop />
           </span>
         </h2>
+        <div className="mt-4 flex">
+          <Button rounded={"3xl"}>
+            <Link href={"/about"} >
+               <p className="font-medium text-sm">About me</p>
+            </Link>
+          </Button>
+          <Button className="ms-4" rounded={"3xl"} variant={"surface"}>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1y2RASeg1eFu-rWgnueadTdvkwwE2-Dry/view?usp=sharing"
+              }
+              target="_blank"
+              className="flex items-center gap-2"
+            >
+              <CiFileOn />
+              <p className="font-medium text-sm">My Resume</p>
+            </Link>
+          </Button>
+        </div>
       </div>
     </PageLayout>
   );
