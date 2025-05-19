@@ -19,7 +19,7 @@ export default function SkillsPage() {
       <h1 className="text-3xl  md:text-4xl font-semibold mb-4 text-center">
         My Skills
       </h1>
-      <div className="grid grid-cols-3   md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-3   md:grid-cols-5 gap-4">
         {skills.map((skill, index) => {
           const { label, Icon, color } = skill;
           const iconColor = useColorModeValue(color.light, color.dark);

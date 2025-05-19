@@ -21,10 +21,13 @@ import {
   SiGit,
   SiRedux,
   SiFigma,
+  SiChakraui,
 } from "react-icons/si";
 import { label } from "framer-motion/client";
 import { BsBootstrapFill } from "react-icons/bs";
 import { IconType } from "react-icons";
+import { CsharpPlain } from "devicons-react";
+import { SiFramer } from "react-icons/si";
 
 export const SkillIcons = {
   // Frontend
@@ -46,6 +49,7 @@ export const SkillIcons = {
   PHP: SiPhp,
   Dart: SiDart,
   Python: SiPython,
+  CSharp: CsharpPlain,
 
   // Database
   MongoDB: SiMongodb,
@@ -53,7 +57,8 @@ export const SkillIcons = {
 
   // Others
   Git: SiGit,
-  Figma: SiFigma,
+  FramerMotion: SiFramer,
+  Chakra: SiChakraui,
 };
 
 export type ProjectType = {
@@ -81,6 +86,23 @@ export const skills = [
     color: { dark: "#3178c6", light: "#3178c6" },
   },
   {
+    label: "Python",
+    Icon: SkillIcons.Python,
+    color: { dark: "#3776ab", light: "#3776ab" },
+  },
+  {
+    label: "C# (Basic)",
+    Icon: SkillIcons.CSharp,
+    color: { dark: "#8e44ad", light: "#8e44ad" }, // purple
+  },
+
+  {
+    label: "Dart",
+    Icon: SkillIcons.Dart,
+    color: { dark: "#0175c2", light: "#0175c2" },
+  },
+
+  {
     label: "React",
     Icon: SkillIcons.React,
     color: { dark: "#61dafb", light: "#21a1f1" },
@@ -89,6 +111,11 @@ export const skills = [
     label: "Angular",
     Icon: SkillIcons.Angular,
     color: { dark: "#dd0031", light: "#dd0031" },
+  },
+  {
+    label: "Flutter",
+    Icon: SkillIcons.Flutter,
+    color: { dark: "#02569b", light: "#42a5f5" }, // updated light theme color
   },
   {
     label: "NextJS (Basic)",
@@ -109,11 +136,6 @@ export const skills = [
     label: "Node.js",
     Icon: SkillIcons.NodeJS,
     color: { dark: "#339933", light: "#339933" },
-  },
-  {
-    label: "Python",
-    Icon: SkillIcons.Python,
-    color: { dark: "#3776ab", light: "#3776ab" },
   },
 
   {
@@ -142,7 +164,7 @@ export const projects: ProjectType[] = [
     git_link: "https://github.com/mskerz/next-app-portfolio",
     preview_link: "https://wichasin-next-portfolio.vercel.app/",
     descriptions:
-      "A personal portfolio website built with Next.js and Tailwind CSS. Implemented Chakra UI and Framer Motion for animations.",
+      "built with Next.js and Tailwind CSS. Implemented Chakra UI and Framer Motion for animations.",
     tools: [
       {
         label: "Next.js",
@@ -153,6 +175,16 @@ export const projects: ProjectType[] = [
         label: "Tailwind CSS",
         icon: SkillIcons.Tailwind,
         color: { dark: "#38bdf8", light: "#38bdf8" },
+      },
+      {
+        label: "Chakra UI",
+        icon: SkillIcons.Chakra,
+        color: { dark: "#319795", light: "#319795" },
+      },
+      {
+        label: "Framer Motion",
+        icon: SkillIcons.FramerMotion,
+        color: { dark: "#fff", light: "#000" },
       },
     ],
   },
@@ -170,30 +202,43 @@ export const projects: ProjectType[] = [
         color: { dark: "#61dafb", light: "#61dafb" },
       },
       {
+        label: "Express",
+        icon: SkillIcons.Express,
+        color: { dark: "#ffffff", light: "#000000" }, // ปรับให้ตัดกัน
+      },
+
+      {
         label: "Redux",
         icon: SkillIcons.Redux,
         color: { dark: "#764abc", light: "#764abc" },
       },
       {
-        label: "Express",
-        icon: SkillIcons.Express,
-        color: { dark: "#ffffff", light: "#000000" }, // ปรับให้ตัดกัน
+        label: "TypeScript",
+        icon: SkillIcons.TypeScript,
+        color: { dark: "#3178c6", light: "#3178c6" },
       },
+    
       {
+        label: "Tailwind CSS",
+        icon: SkillIcons.Tailwind,
+        color: { dark: "#38bdf8", light: "#38bdf8" },
+      },
+         {
         label: "MongoDB",
         icon: SkillIcons.MongoDB,
         color: { dark: "#47a248", light: "#47a248" },
-      },
-
+      }, 
+      
       {
         label: "JavaScript",
         icon: SkillIcons.JavaScript,
         color: { dark: "#f0db4f", light: "#f7df1e" }, // ปรับนิดหน่อย
       },
+   
       {
-        label: "TypeScript",
-        icon: SkillIcons.TypeScript,
-        color: { dark: "#3178c6", light: "#3178c6" },
+        label: "Chakra UI",
+        icon: SkillIcons.Chakra,
+        color: { dark: "#319795", light: "#319795" },
       },
     ],
   },

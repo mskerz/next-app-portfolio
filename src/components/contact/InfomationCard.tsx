@@ -45,7 +45,7 @@ export default function InfomationCard() {
           </Flex>
           <Flex align={"center"} gap={2}>
             <MdLocationOn size={30} />
-            <p className="text-lg font-normal">Bangkok, Thailand</p>
+            <p className="text-lg font-normal">Samut Sakhon, Thailand</p>
           </Flex>
         </div>
       </div>
