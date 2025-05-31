@@ -159,6 +159,36 @@ export const skills = [
 
 export const projects: ProjectType[] = [
   {
+    title: "Chat App with WebSocket",
+    project_type: "Personal Project",
+    git_link: "https://github.com/mskerz/next-chat-socket",
+    preview_link: "https://next-chat-socket-chi.vercel.app",
+    descriptions:
+      "A real-time chat application built with Next.js, Express, and WebSocket. Users can input usernames, join rooms, and send messages in real-time.",
+    tools: [
+      {
+        label: "Next.js",
+        icon: SkillIcons.NextJS,
+        color: { dark: "#FFFF", light: "#000000" },
+      },
+      {
+        label: "Express",
+        icon: SkillIcons.Express,
+        color: { dark: "#ffffff", light: "#000000" }, // ปรับให้ตัดกัน
+      },
+      {
+        label: "Tailwind CSS",
+        icon: SkillIcons.Tailwind,
+        color: { dark: "#38bdf8", light: "#38bdf8" },
+      },
+      {
+        label: "TypeScript",
+        icon: SkillIcons.TypeScript,
+        color: { dark: "#3178c6", light: "#3178c6" },
+      },
+    ],
+  },
+  {
     title: "Portfolio Website",
     project_type: "Personal Project",
     git_link: "https://github.com/mskerz/next-app-portfolio",
@@ -217,24 +247,24 @@ export const projects: ProjectType[] = [
         icon: SkillIcons.TypeScript,
         color: { dark: "#3178c6", light: "#3178c6" },
       },
-    
+
       {
         label: "Tailwind CSS",
         icon: SkillIcons.Tailwind,
         color: { dark: "#38bdf8", light: "#38bdf8" },
       },
-         {
+      {
         label: "MongoDB",
         icon: SkillIcons.MongoDB,
         color: { dark: "#47a248", light: "#47a248" },
-      }, 
-      
+      },
+
       {
         label: "JavaScript",
         icon: SkillIcons.JavaScript,
         color: { dark: "#f0db4f", light: "#f7df1e" }, // ปรับนิดหน่อย
       },
-   
+
       {
         label: "Chakra UI",
         icon: SkillIcons.Chakra,

@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactTyped } from "react-typed";
-import { words } from "@/constant/info";
+import { RESUME_URL, words } from "@/constant/info";
 import { PageLayout } from "@/components/layout";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { Box, Button, Image } from "@chakra-ui/react";
@@ -57,7 +57,7 @@ export default function page() {
           <Button className="ms-4" rounded={"3xl"} variant={"surface"}>
             <Link
               href={
-                "https://drive.google.com/file/d/1y2RASeg1eFu-rWgnueadTdvkwwE2-Dry/view?usp=sharing"
+                RESUME_URL
               }
               target="_blank"
               className="flex items-center gap-2"
