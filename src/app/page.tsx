@@ -55,16 +55,15 @@ export default function page() {
             </Link>
           </Button>
           <Button className="ms-4" rounded={"3xl"} variant={"surface"}>
-            <Link
-              href={
-                RESUME_URL
-              }
+            <a
+              href={RESUME_URL}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
               <CiFileOn />
               <p className="font-medium text-sm">My Resume</p>
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

@@ -1,5 +1,4 @@
-export const RESUME_URL = process.env.NEXT_PUBLIC_RESUME || "https://drive.google.com/file/d/1y2RASeg1eFu-rWgnueadTdvkwwE2-Dry/view?usp=sharing";
-
+export const RESUME_URL = process.env.NEXT_PUBLIC_RESUME || "www.google.com";  
 export type Experience = {
   role?: string; // ทำให้ role เป็น optional
   company?: string; // ทำให้ company เป็น optional
