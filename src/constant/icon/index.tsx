@@ -22,12 +22,23 @@ import {
   SiRedux,
   SiFigma,
   SiChakraui,
+  SiShadcnui,
+  SiPostgresql,
+  SiPrisma,
+  SiFirebase,
 } from "react-icons/si";
-import { label } from "framer-motion/client";
 import { BsBootstrapFill } from "react-icons/bs";
 import { IconType } from "react-icons";
-import { CsharpPlain } from "devicons-react";
+import {
+  CsharpPlain,
+  DockerOriginal,
+  DockerPlain,
+  PostgresqlOriginal,
+  PrismaOriginal,
+} from "devicons-react";
 import { SiFramer } from "react-icons/si";
+import { DiDocker, DiFirebase } from "react-icons/di";
+import { BiLogoFirebase } from "react-icons/bi";
 
 export const SkillIcons = {
   // Frontend
@@ -52,25 +63,31 @@ export const SkillIcons = {
   CSharp: CsharpPlain,
 
   // Database
+  Prisma: SiPrisma,
+  Firebase: BiLogoFirebase,
   MongoDB: SiMongodb,
   MySQL: SiMysql,
+  PostgreSQL: PostgresqlOriginal, // Assuming you meant MySQL for PostgreSQL as well, adjust if needed
 
   // Others
   Git: SiGit,
   FramerMotion: SiFramer,
   Chakra: SiChakraui,
+  ShadcnUI: SiShadcnui,
+  Docker: DockerPlain,
 };
 
 export type ProjectType = {
   title?: string;
+  isDone?: boolean  ; // ทำให้ isDone เป็น optional
   project_type?: string;
   git_link?: string;
   preview_link?: string;
   descriptions?: string;
   tools?: {
     label: string;
-    icon: IconType; // SkillIcons
-    color: { dark: string; light: string };
+    icon: React.ComponentType<any>; // SkillIcons
+    color?: { dark: string; light: string };
   }[];
 };
 
@@ -118,7 +135,7 @@ export const skills = [
     color: { dark: "#02569b", light: "#42a5f5" }, // updated light theme color
   },
   {
-    label: "NextJS (Basic)",
+    label: "NextJS ",
     Icon: SkillIcons.NextJS,
     color: { dark: "#FFFF", light: "#000000" },
   },
@@ -159,8 +176,55 @@ export const skills = [
 
 export const projects: ProjectType[] = [
   {
+    title: "Spotify Clone",
+    isDone: false,
+    project_type: "Personal Project",
+    git_link: "https://github.com/mskerz/spotify-clone-private",
+    descriptions:
+      "Currently building a full-stack music streaming web application inspired by Spotify, featuring user authentication, playlist management, and audio playback.",
+    tools: [
+      {
+        label: "Next.js",
+        icon: SkillIcons.NextJS,
+        color: { dark: "#FFFF", light: "#000000" },
+      },
+      {
+        label: "Prisma",
+        icon: SkillIcons.Prisma,
+        color:  { dark: "#FFFF", light: "#2D3748" }, // Dark gray for both modes
+      },
+      {
+        label: "Tailwind CSS",
+        icon: SkillIcons.Tailwind,
+        color: { dark: "#38bdf8", light: "#38bdf8" },
+      },
+      {
+        label: "PostgreSQL",
+        icon: SkillIcons.PostgreSQL,
+        color: { dark: "#336791", light: "#336791" },
+      },
+      {
+        label: "Shadcn UI",
+        icon: SkillIcons.ShadcnUI,
+        color: { dark: "#FFFF", light: "#000000" },
+      },
+
+      {
+        label: "Docker",
+        icon: SkillIcons.Docker,
+        color: { dark: "#0db7ed", light: "#0db7ed" },
+      },
+      {
+        label: "Firebase Auth",
+        icon: SkillIcons.Firebase,
+        color: { dark: "#FFCA28", light: "#FFCA28" },
+      },
+    ],
+  },
+  {
     title: "Chat App with WebSocket",
     project_type: "Personal Project",
+    isDone: true,
     git_link: "https://github.com/mskerz/next-chat-socket",
     preview_link: "https://next-chat-socket-chi.vercel.app",
     descriptions:
@@ -191,6 +255,7 @@ export const projects: ProjectType[] = [
   {
     title: "Portfolio Website",
     project_type: "Personal Project",
+    isDone: true,
     git_link: "https://github.com/mskerz/next-app-portfolio",
     preview_link: "https://wichasin-next-portfolio.vercel.app/",
     descriptions:
@@ -221,6 +286,7 @@ export const projects: ProjectType[] = [
   {
     title: "Mini Blog Social Media",
     project_type: "Personal Project",
+    isDone: true,
     git_link: "https://github.com/mskerz/blog-social-react",
     preview_link: "https://blog-social-react.vercel.app",
     descriptions:
@@ -275,6 +341,7 @@ export const projects: ProjectType[] = [
 
   {
     title: "Thesis Finder",
+    isDone: true,
     project_type: "Graduate Project",
     git_link: "https://github.com/mskerz/thesis-search-project",
     descriptions:
@@ -305,6 +372,7 @@ export const projects: ProjectType[] = [
   {
     title: "Todo Basic App",
     project_type: "Personal Project",
+    isDone: true,
     git_link: "https://github.com/mskerz/react-todoListBootstrap",
     descriptions:
       "A simple Todo App . Learned the basics of State Management with Hooks and Props.",
@@ -325,6 +393,7 @@ export const projects: ProjectType[] = [
   {
     title: "Mobile App : Article App",
     project_type: "Class Project",
+    isDone: true,
     git_link: "https://github.com/mskerz/content_manage_apps",
     descriptions:
       "Mobile app for article management with bookmarking, search, and user accounts. Built with Flutter/Dart and Laravel backend using MySQL and RESTful API.",
@@ -354,6 +423,7 @@ export const projects: ProjectType[] = [
   },
   {
     title: "Web Application : Lottery Sell",
+    isDone: true,
     project_type: "Class Project",
     git_link: "https://github.com/mskerz/lotttery_project",
     descriptions:

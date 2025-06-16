@@ -34,6 +34,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
     >
       <div className="flex items-start justify-between mb-2">
         <p className={`text-xl font-semibold ${colorClass.title}`}>{title}</p>
+
         <div className="flex gap-3">
           <a
             href={git_link}
@@ -43,6 +44,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
           >
             <FaGithub size={24} />
           </a>
+
           {preview_link && (
             <a
               href={preview_link}
@@ -56,9 +58,18 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         </div>
       </div>
 
-      <p className={`text-sm mb-2 ${colorClass.project_type}`}>
-        {project_type}
-      </p>
+      <div className="flex items-center gap-2 ">
+        <p className={`text-sm ${colorClass.project_type}`}>{project_type}</p>
+        {!project.isDone && (
+          <> 
+            <p>:</p>
+            <span className="text-green-500 text-xs font-semibold">
+              In Progress
+            </span>
+          </>
+        )}
+      </div>
+
       <ul className={`list-disc list-inside my-2 ${colorClass.description}`}>
         <li className="text-md">{descriptions}</li>
       </ul>
@@ -67,7 +78,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         {tools?.map((tool, idx) => {
           const { label, icon, color } = tool;
           const Icon = icon;
-          const iconColor = useColorModeValue(color.light, color.dark);
+          const iconColor = useColorModeValue(color?.light, color?.dark);
 
           return (
             <div
