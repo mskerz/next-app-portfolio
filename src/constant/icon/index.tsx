@@ -79,8 +79,8 @@ export const SkillIcons = {
 
 export type ProjectType = {
   title?: string;
-  isDone?: boolean  ; // ทำให้ isDone เป็น optional
-  project_type?: string;
+  isDone?: boolean; // ทำให้ isDone เป็น optional
+  project_type?: "CLASS" | "FINAL" | "PERSONAL" | "PART-TIME";
   git_link?: string;
   preview_link?: string;
   descriptions?: string;
@@ -176,12 +176,41 @@ export const skills = [
 
 export const projects: ProjectType[] = [
   {
-    title: "Spotify Clone",
+    title: "OCR Image to Text",
     isDone: false,
-    project_type: "Personal Project",
-    git_link: "https://github.com/mskerz/spotify-clone-private",
+    project_type: "PERSONAL",
+    git_link: "https://github.com/mskerz/ocr-image-to-text",
+
     descriptions:
-      "Currently building a full-stack music streaming web application inspired by Spotify, featuring user authentication, playlist management, and audio playback.",
+      "A web application that allows users to upload an image and convert it into text using OCR technology with Tesseract.js.",
+
+    tools: [
+      {
+        label: "Next.js",
+        icon: SkillIcons.NextJS,
+        color: { dark: "#FFFF", light: "#000000" },
+      },
+
+      {
+        label: "Tailwind CSS",
+        icon: SkillIcons.Tailwind,
+        color: { dark: "#38bdf8", light: "#38bdf8" },
+      },
+      {
+        label: "Shadcn UI",
+        icon: SkillIcons.ShadcnUI,
+        color: { dark: "#FFFF", light: "#000000" },
+      },
+    ],
+  },
+  {
+    title: "Spotify Clone",
+    isDone: true,
+    project_type: "PERSONAL",
+    git_link: "https://github.com/mskerz/spotify-clone-private",
+    preview_link: "https://spotify-clone-private.onrender.com/",
+    descriptions:
+      " building a full-stack music web application inspired by Spotify, featuring user authentication, playlist management, ",
     tools: [
       {
         label: "Next.js",
@@ -191,7 +220,7 @@ export const projects: ProjectType[] = [
       {
         label: "Prisma",
         icon: SkillIcons.Prisma,
-        color:  { dark: "#FFFF", light: "#2D3748" }, // Dark gray for both modes
+        color: { dark: "#FFFF", light: "#2D3748" }, // Dark gray for both modes
       },
       {
         label: "Tailwind CSS",
@@ -223,7 +252,7 @@ export const projects: ProjectType[] = [
   },
   {
     title: "Chat App with WebSocket",
-    project_type: "Personal Project",
+    project_type: "PERSONAL",
     isDone: true,
     git_link: "https://github.com/mskerz/next-chat-socket",
     preview_link: "https://next-chat-socket-chi.vercel.app",
@@ -252,40 +281,40 @@ export const projects: ProjectType[] = [
       },
     ],
   },
+  // {
+  //   title: "Portfolio Website",
+  //   project_type: "Personal Project",
+  //   isDone: true,
+  //   git_link: "https://github.com/mskerz/next-app-portfolio",
+  //   preview_link: "https://wichasin-next-portfolio.vercel.app/",
+  //   descriptions:
+  //     "built with Next.js and Tailwind CSS. Implemented Chakra UI and Framer Motion for animations.",
+  //   tools: [
+  //     {
+  //       label: "Next.js",
+  //       icon: SkillIcons.NextJS,
+  //       color: { dark: "#FFFF", light: "#000000" },
+  //     },
+  //     {
+  //       label: "Tailwind CSS",
+  //       icon: SkillIcons.Tailwind,
+  //       color: { dark: "#38bdf8", light: "#38bdf8" },
+  //     },
+  //     {
+  //       label: "Chakra UI",
+  //       icon: SkillIcons.Chakra,
+  //       color: { dark: "#319795", light: "#319795" },
+  //     },
+  //     {
+  //       label: "Framer Motion",
+  //       icon: SkillIcons.FramerMotion,
+  //       color: { dark: "#fff", light: "#000" },
+  //     },
+  //   ],
+  // },
   {
-    title: "Portfolio Website",
-    project_type: "Personal Project",
-    isDone: true,
-    git_link: "https://github.com/mskerz/next-app-portfolio",
-    preview_link: "https://wichasin-next-portfolio.vercel.app/",
-    descriptions:
-      "built with Next.js and Tailwind CSS. Implemented Chakra UI and Framer Motion for animations.",
-    tools: [
-      {
-        label: "Next.js",
-        icon: SkillIcons.NextJS,
-        color: { dark: "#FFFF", light: "#000000" },
-      },
-      {
-        label: "Tailwind CSS",
-        icon: SkillIcons.Tailwind,
-        color: { dark: "#38bdf8", light: "#38bdf8" },
-      },
-      {
-        label: "Chakra UI",
-        icon: SkillIcons.Chakra,
-        color: { dark: "#319795", light: "#319795" },
-      },
-      {
-        label: "Framer Motion",
-        icon: SkillIcons.FramerMotion,
-        color: { dark: "#fff", light: "#000" },
-      },
-    ],
-  },
-  {
-    title: "Mini Blog Social Media",
-    project_type: "Personal Project",
+    title: "Mini  Social Media",
+    project_type: "PERSONAL",
     isDone: true,
     git_link: "https://github.com/mskerz/blog-social-react",
     preview_link: "https://blog-social-react.vercel.app",
@@ -342,7 +371,7 @@ export const projects: ProjectType[] = [
   {
     title: "Thesis Finder",
     isDone: true,
-    project_type: "Graduate Project",
+    project_type: "FINAL",
     git_link: "https://github.com/mskerz/thesis-search-project",
     descriptions:
       "Web application for thesis search system using TF-IDF to measure word importance and PythaiNLP for document retrieval and word processing for KU CSC students.",
@@ -371,7 +400,7 @@ export const projects: ProjectType[] = [
   },
   {
     title: "Todo Basic App",
-    project_type: "Personal Project",
+    project_type: "PERSONAL",
     isDone: true,
     git_link: "https://github.com/mskerz/react-todoListBootstrap",
     descriptions:
@@ -392,7 +421,7 @@ export const projects: ProjectType[] = [
   },
   {
     title: "Mobile App : Article App",
-    project_type: "Class Project",
+    project_type: "CLASS",
     isDone: true,
     git_link: "https://github.com/mskerz/content_manage_apps",
     descriptions:
@@ -424,7 +453,7 @@ export const projects: ProjectType[] = [
   {
     title: "Web Application : Lottery Sell",
     isDone: true,
-    project_type: "Class Project",
+    project_type: "CLASS",
     git_link: "https://github.com/mskerz/lotttery_project",
     descriptions:
       "Developed a web application for buy-sell lottery tickets featuring user registration, login, ticket search with filter and other features. ",

@@ -59,7 +59,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
       </div>
 
       <div className="flex items-center gap-2 ">
-        <p className={`text-sm ${colorClass.project_type}`}>{project_type}</p>
+        <p className={`text-sm ${colorClass.project_type}`}>{`${project_type?.charAt(0).toUpperCase()}${project_type?.slice(1).toLowerCase()}`} Project</p>
         {!project.isDone && (
           <> 
             <p>:</p>
